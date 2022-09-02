@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h5>예약내역 확인</h5>
+<div>이름: {{ rlist.name }}</div>
+<div>전화번호: {{ rlist.phoneNumber }}</div>
+<div>학교: {{ rlist.schoolName }}</div>
+<div>학년: {{ rlist.gradeNumber }}</div>
+<div>등록: {{ rlist.regDate }}</div>
+<div>현재상태:
+     {% if rlist.useTicket == 0 %}
+     입장가능
+     {% else %}
+     입장불가
+     {% endif %}
+</div>
+
+{% endblock %}
